@@ -19,16 +19,12 @@ library(ggplot2)
 
 ggplot(NEIsub, aes(x=factor(year), y=Emissions, fill=factor(year))) + 
 stat_summary(fun.y = "sum", position=position_dodge(), geom = "bar", ) + 
-facet_wrap(~fips, scale = "free")
+facet_wrap(~fips, scale = "free") +
 xlab("Year") + theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-ggtitle("Emissions in Baltimore City from 1999–2008 from various motor vehicel sources") +
+ggtitle("Emissions in Baltimore City Vs. Los Angeles County from 1999–2008 from Various Motor Vehicle Sources") +
 scale_fill_discrete(name="Year")
 
 ##After verifying the plot, copy to png file.
 
 dev.copy(png, "plot6.png", height = 480, width = 480, unit = "px")
 dev.off()
-
-
- 
-

@@ -24,14 +24,10 @@ library(ggplot2)
 ggplot(NEIsub, aes(x=factor(year), y=Emissions, fill=factor(year))) + 
 stat_summary(fun.y = "sum", position=position_dodge(), geom = "bar", ) + 
 xlab("Year") + theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-ggtitle("Emissions from 1999–2008 from various coal combustion-related sources") +
+ggtitle("Emissions from 1999–2008 from Various Coal Combustion-Related Sources") +
 scale_fill_discrete(name="Year")
 
 ##After verifying the plot, copy to png file.
 
 dev.copy(png, "plot4.png", height = 480, width = 480, unit = "px")
 dev.off()
-
-
- 
-

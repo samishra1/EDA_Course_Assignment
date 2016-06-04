@@ -9,13 +9,9 @@ NEI <- readRDS("summarySCC_PM25.rds")
 SCC <- readRDS("Source_Classification_Code.rds")
 
 ##plot Emissions by Year
-barplot(with(NEI, tapply(Emissions, year, sum)), xlab = "Year", ylab = "Emissions", main = "PM2.5 Emissions over Years", col = 1:4)
+barplot(with(NEI, tapply(Emissions, year, sum)), xlab = "Year", ylab = "Emissions", main = "PM2.5 Emissions Over Years", col = 2:5)
 
 ##After verifying the plot, copy to png file.
 
 dev.copy(png, "plot1.png", height = 480, width = 480, unit = "px")
 dev.off()
-
-
- 
-
